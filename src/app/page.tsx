@@ -6,6 +6,7 @@ import { fetchAPI } from "@/lib/api";
 import PetFilter from "@/components/PetFilter";
 import Skeleton from "react-loading-skeleton";
 import List from "@/components/List";
+import NotFound from "@/components/NotFound";
 
 interface Pet {
   id: string;
@@ -74,6 +75,7 @@ const Home = () => {
             <Skeleton key={idx} height={100} className="my-1" />
           ))}
         {Array.isArray(customersList) && <List listData={customersList} />}
+        {customersList?.length == 0 && <NotFound />}
       </div>
     </div>
   );
