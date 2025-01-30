@@ -52,7 +52,7 @@ const Home = () => {
 
   useEffect(() => {
     getCustomers();
-  }, [,]);
+  }, []);
 
   return (
     <div className="container mx-auto p-8 pb-20 gap-16 lg:p-20">
