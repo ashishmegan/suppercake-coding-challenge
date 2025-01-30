@@ -26,8 +26,8 @@ const PetFilter: React.FC<PetFilterProps> = ({
   };
 
   const handleReset = () => {
-    setSelectedPet("any animal");
     getCustomers();
+    setSelectedPet("any animal");
     setIsOpen(false);
   };
 

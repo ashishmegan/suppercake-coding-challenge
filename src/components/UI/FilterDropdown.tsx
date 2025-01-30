@@ -30,7 +30,7 @@ const FilterDropdown: React.FC<PetFilterDropdownProps> = ({
   onReset,
   onApply,
 }) => (
-  <PopoverContent className="p-4 z-10 bg-white rounded-[12px] shadow-lg w-[334px]">
+  <PopoverContent className="p-4 z-10 bg-white rounded-[15px] shadow-lg w-[334px]">
     <div className="gap-[4px]">
       {petOptions.map((pet) => (
         <OptionButton

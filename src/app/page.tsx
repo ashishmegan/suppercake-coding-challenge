@@ -7,6 +7,7 @@ import PetFilter from "@/components/PetFilter";
 import Skeleton from "react-loading-skeleton";
 import List from "@/components/List";
 import NotFound from "@/components/NotFound";
+import Error from "@/components/Error";
 
 interface Pet {
   id: string;
@@ -51,7 +52,7 @@ const Home = () => {
 
   useEffect(() => {
     getCustomers();
-  }, []);
+  }, [,]);
 
   return (
     <div className="container mx-auto p-8 pb-20 gap-16 lg:p-20">
@@ -76,6 +77,7 @@ const Home = () => {
           ))}
         {Array.isArray(customersList) && <List listData={customersList} />}
         {customersList?.length == 0 && <NotFound />}
+        {error && <Error error={error} />}
       </div>
     </div>
   );
