@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import SearchBar from "@/components/SearchBar";
 import { fetchAPI } from "@/lib/api";
+import PetFilter from "@/components/PetFilter";
 
 interface Pet {
   id: string;
@@ -55,6 +56,11 @@ const Home = () => {
         <h2 className="text-xl font-semibold mb-4">Customers and Pets</h2>
         <div className="flex space-x-3 items-center lg:w-[600px]">
           <SearchBar setSearchText={setSearchText} />
+          <PetFilter
+            selectedPet={species}
+            setSelectedPet={setSpecies}
+            getCustomers={getCustomers}
+          />
         </div>
       </div>
     </div>
